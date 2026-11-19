@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-condensed: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: #f5f0e7;
+    color: #151515;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f5f0e7;
+    color: #151515;
+    overflow-x: hidden;
+  }
+}
+
+.font-condensed {
+  font-family: var(--font-condensed);
+}
+
+.font-editorial-serif {
+  font-family: var(--font-serif);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
